@@ -1,0 +1,12 @@
+// mixins.scss
+
+@mixin box-shadow($x-offset, $y-offset, $blur, $color) {
+    box-shadow: $x-offset $y-offset $blur $color;
+  }
+  
+@mixin background-image-cover($image-url) {
+    background-image: url($image-url);
+    background-size: cover;
+    background-position: center;
+  }
+  

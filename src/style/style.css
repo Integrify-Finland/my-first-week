@@ -1,0 +1,262 @@
+/* Reset some basic elements */
+body,
+h1,
+h2,
+h3,
+p,
+ul,
+ol,
+li {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Open Sans', Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: #f4f4f4;
+}
+
+/* Header styling */
+header {
+    background: linear-gradient(to right, #8dc58f, #8dc58f);
+    color: white;
+    padding: 1rem 0;
+    text-align: center;
+    font-size: 1.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+/* Navigation */
+#site-nav {
+    background: #43a047;
+    color: white;
+    height: 60px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+#site-nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+#site-nav ul li {
+    margin: 0 20px;
+}
+
+#site-nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 20px;
+    transition: color 0.3s;
+}
+
+#site-nav ul li a:hover {
+    color: #43a047;
+}
+
+
+/* Section styling */
+section {
+    background: white;
+    padding: 20px;
+    margin: 20px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+/* 1. Top Hiking Trails */
+article,
+address {
+    margin-bottom: 15px;
+}
+
+/* Consistent title styles across sections */
+article h2,
+address h2,
+section h2 {
+    margin-bottom: 10px;
+    color: #333;
+    border-bottom: 3px solid #4CAF50;
+    padding-bottom: 5px;
+}
+
+
+/* 2. Wildlife Wonders */
+#section2 {
+
+    padding: 20px;
+    /* 添加内边距 */
+}
+
+#section2 nav {
+    background-color: #8dc58f;
+    border-radius: 10px;
+    /* 圆角 */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+
+#section2 nav ul {
+    list-style-type: none;
+    display: flex;
+    /* 使用弹性布局，水平排列导航项 */
+    justify-content: space-between;
+    /* 在导航项之间平均分配空间 */
+    flex-wrap: wrap;
+    /* 如果导航项太多，自动换行 */
+    padding: 0;
+    /* 重置内边距 */
+    border-radius: 10px;
+    /* 圆角 */
+}
+
+#section2 nav ul li {
+    background: white;
+    /* 设置背景色 */
+    border-radius: 10px;
+    /* 圆角 */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    /* 阴影 */
+    overflow: hidden;
+    /* 隐藏溢出内容 */
+    color: #333;
+    /* 文本颜色 */
+    margin: 10px;
+    /* 导航项之间的外边距 */
+    width: calc(33.33% - 20px);
+    /* 使每个导航项占据1/3的宽度，减去外边距的20px */
+    text-align: center;
+    /* 文本居中 */
+    transition: background-color 0.3s;
+    /* 添加背景颜色过渡效果 */
+}
+
+#section2 nav ul li label {
+    display: block;
+    text-align: center;
+    padding: 10px;
+    background-size: cover;
+    background-position: center;
+    font-size: 25px;
+}
+
+#section2 p {
+    margin-bottom: 20px;
+    margin-left: 5px;
+}
+
+#section2 nav ul li a {
+    display: block;
+    /* 块级元素 */
+    text-decoration: none;
+    padding: 20px;
+    /* 内边距 */
+    background-size: cover;
+    /* 背景图片覆盖 */
+    background-position: center;
+    /* 背景图片居中 */
+    font-size: 15px;
+}
+
+#section2 nav ul li:hover {
+    background-color: #4CAF50;
+    /* 悬停时的背景颜色 */
+    color: white;
+    /* 悬停时的文本颜色 */
+}
+
+
+#serengeti-lions ul {
+    background-image: url('../pic/lions.jpeg');
+    background-size: cover;
+}
+
+#barrier-reef ul {
+    background-image: url('../pic/barrier_reef.jpeg');
+    background-size: cover;
+}
+
+#amazon-birds ul {
+    background-image: url('../pic/amazon_birds.jpeg');
+    background-size: cover;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 3. Key Topics */
+#section3 ul,
+#section3 ol {
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+/* Table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+table,
+th,
+td {
+    border: 1px solid #ddd;
+}
+
+th,
+td {
+    text-align: left;
+    padding: 8px;
+}
+
+th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+/* Footer */
+footer {
+    background: #262626;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        height: auto;
+    }
+
+    nav ul li {
+        margin-bottom: 10px;
+    }
+}

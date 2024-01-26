@@ -1,0 +1,206 @@
+// style.scss
+
+@use 'variables';
+@use 'mixins';
+
+body, h1, h2, h3, p, ul, ol, li {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: variables.$font-stack;
+    line-height: 1.6;
+    color: variables.$primary-color;
+    background: variables.$background-color;
+}
+
+header {
+    background: variables.$header-bg;
+    color: white;
+    padding: 1rem 0;
+    text-align: center;
+    font-size: 1.5rem;
+    @include mixins.box-shadow(0, 2px, 4px, variables.$shadow-color);
+}
+
+#site-nav {
+    background: variables.$nav-bg;
+    color: white;
+    height: 60px;
+    @include mixins.box-shadow(0, 2px, 4px, variables.$shadow-color);
+}
+
+#site-nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+#site-nav ul li {
+    margin: 0 20px;
+}
+
+#site-nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 20px;
+    transition: color 0.3s;
+}
+
+#site-nav ul li a:hover {
+    color: variables.$link-hover-color;
+}
+
+section {
+    background: variables.$section-bg;
+    padding: 20px;
+    margin: 20px 0;
+    @include mixins.box-shadow(0, 2px, 4px, rgba(0, 0, 0, 0.1));
+    border-radius: 5px;
+}
+
+article,
+address {
+    margin-bottom: 15px;
+}
+
+article h2,
+address h2,
+section h2 {
+    margin-bottom: 10px;
+    color: variables.$primary-color;
+    border-bottom: 3px solid variables.$section-border-color;
+    padding-bottom: 5px;
+}
+
+/* Wildlife Wonders section */
+#section2 {
+    padding: 20px;
+}
+
+#section2 nav {
+    @include mixins.box-shadow(0, 2px, 4px, variables.$shadow-color);
+    border-radius: 10px;
+    background-color: #8dc58f;
+}
+
+#section2 nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0;
+    border-radius: 10px;
+}
+
+#section2 nav ul li {
+    display: grid;
+    grid-template-rows: 0.1fr 0.2fr 0fr;
+    background: variables.$section-bg;
+    border-radius: 10px;
+    @include mixins.box-shadow(0, 2px, 5px, rgba(0, 0, 0, 0.1));
+    overflow: hidden;
+    color: variables.$primary-color;
+    margin: 10px;
+    width: calc(33.33% - 20px);
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+#section2 nav ul li label {
+    display: block;
+    text-align: center;
+    padding: 10px;
+    background-size: cover;
+    background-position: center;
+    font-size: 25px;
+}
+
+#section2 p {
+    margin-bottom: 20px;
+    margin-left: 5px;
+}
+
+#section2 nav ul li a {
+    display: block;
+    text-decoration: none;
+    padding: 20px;
+    background-size: cover;
+    background-position: center;
+    font-size: 15px;
+}
+
+#section2 nav ul li:hover {
+    background-color: variables.$section-border-color;
+    color: white;
+}
+
+#serengeti-lions ul{
+    @include mixins.background-image-cover('./pic/lions.jpeg'); 
+}
+
+#barrier-reef ul{
+    @include mixins.background-image-cover('./pic/barrier_reef.jpeg'); 
+}
+
+#amazon-birds ul{
+    @include mixins.background-image-cover('./pic/amazon_birds.jpeg'); 
+}
+
+/* Key Topics section */
+#section3 ul,
+#section3 ol {
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+/* Table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    text-align: left;
+    padding: 8px;
+}
+
+th {
+    background-color: variables.$section-border-color;
+    color: white;
+}
+
+/* Footer */
+footer {
+    background: variables.$footer-bg;
+    color: variables.$footer-text-color;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media screen and (max-width: variables.$breakpoint-mobile) {
+    nav ul {
+        flex-direction: column;
+        height: auto;
+    }
+
+    nav ul li {
+        margin-bottom: 10px;
+    }
+
+    #site-nav ul li a {
+        font-size: 1rem; 
+    }
+
+}
